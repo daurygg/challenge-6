@@ -1,0 +1,196 @@
+
+
+
+:root {
+    --desktop-view-size: 1440px;
+    --mobile-view-size: 375px;
+    --paragraph-font-size: 15px;
+    --font-family:"Poppins", sans-serif;;
+    --font-Weights--200: 200; 
+    --font-Weights--400: 400; 
+    --font-Weights--600: 600; 
+    --color-Red: hsl(0, 78%, 62%);
+    --color-Cyan: hsl(180, 62%, 55%);
+    --color-Orange: hsl(34, 97%, 64%);
+    --color-Blue: hsl(212, 86%, 64%);
+    --color-Very-Dark-Blue: hsl(234, 12%, 34%);
+    --color-Grayish-Blue: hsl(229, 6%, 66%);
+    --color-Very-Light-Gray: hsl(0, 0%, 98%);
+  }
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+body {
+    background: var(--color-Very-Light-Gray);
+    place-items: center;    
+    margin: 0;  
+    height: 100vh;
+}
+
+h1 {
+    font-family: var(--font-family);
+    color: var(--color-Very-Dark-Blue);
+}
+
+.firsttitle {    
+    font-weight: var(--font-Weights--200);
+}
+
+.secondtittle {
+    font-family: var(--font-family);
+    font-weight: var(--font-Weights--600);
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);    
+    gap: 25px;
+    width: var(--desktop-view-size);
+    height: 100vh;
+    align-items: center;
+}
+.header {
+    grid-column: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 1;   
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+    margin-top: 150px;
+    margin-bottom: -70px;
+}
+  
+.header > p {
+    
+    font-family: var(--font-family);
+    text-align: center;
+    color: var(--color-Grayish-Blue);
+    font-weight: 400;  
+    margin-top: 20px;
+}
+.card-calculator,.card-karma, .card-supervisor,.card-teambuilder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+    box-shadow: 2px 21px 28px -9px rgba(0,0,0,0.29);
+    border-radius: 10px;
+    height: 290px;
+    width: 380px;
+    padding: 20px;    
+}    
+
+img {
+    width: 80px;
+}
+
+.card-calculator > img, .card-karma > img, .card-supervisor > img, .card-teambuilder > img {
+    
+    align-self: flex-end;
+}
+
+.card-teambuilder {
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2; 
+    margin-top: 120px;
+    border-top: 5px solid var(--color-Red);
+}
+
+.card-karma{
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 4;
+    margin-top: -10px;
+    border-top: 5px solid var(--color-Orange);
+}
+
+.card-calculator {
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 3;
+    border-top: 5px solid var(--color-Blue);
+}
+
+.card-supervisor {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    border-top: 5px solid var(--color-Cyan);
+}
+
+.card-calculator > p, .card-karma > p, .card-supervisor > p, .card-teambuilder > p {
+    
+   font-size: var(--paragraph-font-size);
+   font-family: var(--font-family);
+   font-weight: var(--font-Weights--200);
+
+}
+
+
+@media (max-width:375px) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(9, 1fr);       
+        max-width: var(--mobile-view-size);
+        height: 100vh;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header {
+        grid-column: span 3 / span 3;
+        grid-column-start: 3;
+        grid-row-start: 1;        
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    .card-calculator,.card-karma, .card-supervisor,.card-teambuilder{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;    
+        box-shadow: 2px 21px 28px -9px rgba(0,0,0,0.29);
+        border-radius: 10px;
+        height: 290px;
+        width: 350px;
+        padding: 20px;    
+        margin: auto;
+    }    
+    
+
+    .card-supervisor {
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 2;
+        border-top: 5px solid var(--color-Cyan);
+    }
+    .card-teambuilder {
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 6;        
+        border-top: 5px solid var(--color-Red);
+    }
+    
+    .card-karma{
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 4;        
+        border-top: 5px solid var(--color-Orange);
+    }
+    
+    .card-calculator {
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 8;
+        border-top: 5px solid var(--color-Blue);
+    }
+  
+   
+}

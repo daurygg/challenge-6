@@ -1,0 +1,31 @@
+/* Un reset más completo */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; /* Ajusta el tamaño del texto de manera consistente */
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif; /* Elige una fuente básica */
+}
+
+ul, ol {
+  list-style: none; /* Elimina los puntos o números de las listas */
+}
+
+img, video {
+  max-width: 100%;
+  height: auto; /* Asegura que las imágenes no se salgan del contenedor */
+}
+
+a {
+  text-decoration: none; /* Elimina los subrayados de los enlaces */
+}
